@@ -14,13 +14,23 @@ body {
 }
 
 #container {
-    width: 95%;
+    width: 80%;
     margin: auto;
+}
+
+aside, #content {
+    float: left;
+}
+
+aside {
+    width: 20%;
+    height: 800px;
+    background-color: rgba(255, 234, 97, 0.8);
 }
 
 #content {
     overflow-y: scroll;
-    width: 100%;
+    width: 80%;
     height: 800px;
     background-color: teal;
 }
@@ -36,55 +46,31 @@ footer > div {
 
 /* ------------------- navigation ------------------- */
 
-aside {
-    width: 95%;
-    height: 5%;
-    background-color: rgba(255, 234, 97, 0.8);
-}
-
 aside ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 33%;
+    width: 100%;
     background-color: rgba(0, 0, 255, 0.5);
 }
 
 li {
     color: black;
-    width: auto;
-    float: left;
-    padding: 1%;
 }
 
 li a {
     text-decoration: none;
     color:black;
     font-size: 18px;
+    display: block;
 }
 
 li a:hover {
     background-color: rgba(255, 0, 0, 1);
 }
 
-ul li ul {
-    height: auto;
-    display: none;
-}
-
-ul li:hover ul {
-    display: block;
-}
-
 ul li ul li {
-    width: 100%;
-    display: block;
-}
-
-ul li ul li a {
-    width: 100%;
     font-size: 18px;
-    display: inline-block;
 }
 
 ul li ul li a {
@@ -92,26 +78,13 @@ ul li ul li a {
 }
 
 /* ------------------- content ------------------- */
-@media screen and (min-width: 1000px){
-    article {
-        width: 45%;
-        float: left;
-    }
-}
-
-@media (max-width: 1000px) {
-    article { 
-        width: 100%;
-    }
-}
-
 article {
     margin-top: 50px;
     margin-left: 10px;
 }
 
 img {
-    width: 100%;
+    width: 800px;
 }
 
 textarea {
@@ -119,16 +92,7 @@ textarea {
 }
 
 table {
-    border-collapse: collapse;
-}
-
-tr {
-    border-bottom: 1px solid black;
-}
-
-table {
     width: 100%;
-    overflow-x: auto;
 }
 
 th, tr {
@@ -156,14 +120,14 @@ input[type=text] {
     width: 198px;
 }
 
-#form-col-left, #form-col-right {
-    background-color: lightblue;
-}
-
 form {
     margin-left: 10px;
 }
 
+#form-col-left, #form-col-right {
+    float: left;
+    width: 50%;
+}
 
 footer {
     background-color:cornflowerblue;
@@ -171,10 +135,5 @@ footer {
 }
 
 footer > div {
-    display: inline-block;
-    padding: 1%;
-}
-
-footer div {
-    width: 30%;
+    padding: 10px 0;
 }

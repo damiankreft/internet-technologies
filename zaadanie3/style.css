@@ -37,17 +37,13 @@ footer > div {
 /* ------------------- navigation ------------------- */
 
 aside {
-    width: 95%;
     height: 5%;
-    background-color: rgba(255, 234, 97, 0.8);
 }
 
 aside ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 33%;
-    background-color: rgba(0, 0, 255, 0.5);
 }
 
 li {
@@ -64,36 +60,38 @@ li a {
 }
 
 li a:hover {
-    background-color: rgba(255, 0, 0, 1);
+    background-color: rgba(200, 200, 200, 1);
 }
 
 ul li ul {
     height: auto;
     display: none;
+    width: 100px;
 }
 
 ul li:hover ul {
     display: block;
+    position: absolute;
 }
 
 ul li ul li {
-    width: 100%;
-    display: block;
+    background-color: rgba(120, 120, 120, 1);
+    width: auto;
 }
 
 ul li ul li a {
     width: 100%;
     font-size: 18px;
-    display: inline-block;
+    border-bottom: 1px solid white;
 }
 
 ul li ul li a {
-    padding-left: 20px;
+    padding: 1px 5px;
 }
 
 /* ------------------- content ------------------- */
 @media screen and (min-width: 1000px){
-    article {
+    article, .part1, .part2 {
         width: 45%;
         float: left;
     }
@@ -118,6 +116,9 @@ textarea {
     width: 200px;
 }
 
+
+/* ----------table---------- */
+
 table {
     border-collapse: collapse;
 }
@@ -129,10 +130,6 @@ tr {
 table {
     width: 100%;
     overflow-x: auto;
-}
-
-th, tr {
-    height: 50px;
 }
 
 th {
@@ -150,6 +147,63 @@ td {
 tr:nth-child(2n) {
     background-color: #9999ff;
 }
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 1000px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { 
+        border: 1px solid #ccc;
+        background-color: darksalmon;
+    }
+
+    tr:nth-child(2n) {
+        background-color:coral;
+    }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "First Name"; }
+	td:nth-of-type(2):before { content: "Last Name"; }
+	td:nth-of-type(3):before { content: "Job Title"; }
+}
+
 
 /* ------------------- form ------------------- */
 input[type=text] {

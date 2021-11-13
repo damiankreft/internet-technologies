@@ -102,22 +102,35 @@ function christmasTree(height) {
     console.log(tree);
 }
 
-function pole() {
+function area(a, b, c, typ) {
+    switch (typ) {
+        case "rectangle":
+            console.log(rectangle(a, b));
+            break;
+        case "trapeze":
+            console.log(trapeze(a, b));
+            break;
+        case "parallelogram":
+            console.log(parallelogram(a, b));
+            break;
+        case "triangle":
+            console.log(triangle(a, b));
+            break;
+    }
+}
+
+function rectangle() {
 
 }
 
-function prostokat() {
+function trapeze() {
 
 }
 
-function trapez() {
+function parallelogram() {
 
 }
 
-function rownoleglobok() {
-
-}
-
-function trojkat() {
+function triangle() {
     
 }

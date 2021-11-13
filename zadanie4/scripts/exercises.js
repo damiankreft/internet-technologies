@@ -4,19 +4,25 @@ function exercise_1() {
     isPythagoreanTriple(2, 3, 4);
 }
 
-function exercise() {
-    
+function exercise_2() {
+    rangeThreeDivisibility(10, 100, 2);
+    rangeThreeDivisibility(1, 12, 3);
 }
 
-function exercise() {
-    
+function exercise_3() {
+    multiplicationTable(4);
+    multiplicationTable(10);
 }
 
-function exercise() {
-    
+function exercise_4() {
+    fibonacci(10);
 }
 
-function exercise() {
+function exercise_5() {
+    christmasTree(5);
+}
+
+function exercise_6() {
     
 }
 /* actual code */
@@ -36,4 +42,82 @@ function isPythagoreanTriple(a, b, c) {
     }
 
     console.log("Exercise 1 #####")
+}
+
+function rangeThreeDivisibility(a, b, c) {
+    console.log("");
+    console.log("Exercise 2 start");
+
+    for (let num = a; num <= b; num++) {
+        if (num % c === 0) {
+            console.log(num);
+        }
+    }
+
+    console.log("Exercise 2 #####")
+}
+
+function multiplicationTable(height) {
+    var result = "";
+
+    for (let column = 1; column <= height; column++) {
+        for (let row = 1; row <= height; row++) {
+            var val = column * row;
+            if (val >= 10) {
+                result += val + " ";
+            }
+            else {
+                result += val + "  "
+            }
+        }
+        result += '\n'
+    }
+
+    console.log(result);
+}
+
+function fibonacci(length) {
+    var i;
+    var fib = [];
+
+    fib[0] = 0;
+    fib[1] = 1;
+    for (i = 2; i <= length; i++) {
+        fib[i] = fib[i - 2] + fib[i - 1];
+        console.log(fib[i]);
+    }
+}
+
+function christmasTree(height) {
+    var tree = "";
+
+    for (let index = height; index > 1; index--) {
+        for (let j = 0; j <= height-index; j++) {
+            tree += "*";
+        }
+
+        tree += "\n";
+    }
+
+    console.log(tree);
+}
+
+function pole() {
+
+}
+
+function prostokat() {
+
+}
+
+function trapez() {
+
+}
+
+function rownoleglobok() {
+
+}
+
+function trojkat() {
+    
 }

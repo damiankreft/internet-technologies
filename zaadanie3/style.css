@@ -133,7 +133,7 @@ table {
 }
 
 th {
-    background-color: 
+    background-color: #000;
 }
 
 tr:nth-child(n) {

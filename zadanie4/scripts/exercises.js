@@ -25,6 +25,74 @@ function exercise_5() {
 function exercise_6() {
     christmasTree2(5);
 }
+
+function exercise_7() {
+
+}
+
+function exercise_8() {
+    
+}
+
+function exercise_9() {
+    
+}
+
+function exercise_10() {
+    
+}
+
+class Auto {
+    static auta = [];
+
+    constructor(rok, przebieg, cena_wyjsciowa, cena_koncowa) {
+        this.rok = rok;
+        this.przebieg = przebieg;
+        this.cena_wyjsciowa = cena_wyjsciowa;
+        this.cena_koncowa = cena_koncowa;
+    }
+
+    zwiekszCeneWyjsciowa() {
+        this.cena_wyjsciowa += 1_000;
+    }
+
+    obnizCeneKoncowaRok() {
+        this.cena_koncowa -= Math.floor(new Date().getFullYear() - this.rok) * 1_000;
+
+        if (this.cena_koncowa < 0 ) {
+            this.cena_koncowa = 0;
+        }
+    }
+
+    obnizCeneKoncowaPrzebieg() {
+        this.cena_koncowa -= Math.floor(this.przebieg / 100_000) * 10_000;
+
+        if (this.cena_koncowa < 0 ) {
+            this.cena_koncowa = 0;
+        }
+    }
+
+    ustawPrzebiegAndRokAndCenaKoncowa(rok, przebieg) {
+        this.rok = rok;
+        this.przebieg = przebieg;
+
+        this.obnizCeneKoncowaRok();
+        this.obnizCeneKoncowaPrzebieg();
+    }
+
+    dopiszDoTablicy() {
+        if (this.cena_koncowa > 10_000) {
+            Auto.auta.push(this);
+        }
+    }
+
+    static zwiekszRokByOne() {
+        Auto.auta.forEach((c) => { 
+            c.rok += 1;
+         })
+    }
+}
+
 /* actual code */
 function isPythagoreanTriple(a, b, c) {
     console.log("");

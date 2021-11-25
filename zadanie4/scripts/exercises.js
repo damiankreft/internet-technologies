@@ -23,7 +23,7 @@ function exercise_5() {
 }
 
 function exercise_6() {
-    
+    christmasTree2(5);
 }
 /* actual code */
 function isPythagoreanTriple(a, b, c) {
@@ -102,13 +102,30 @@ function christmasTree(height) {
     console.log(tree);
 }
 
+function christmasTree2(height) {
+    var tree = "";
+
+    for (let index = 0; index < height; index++) {
+        for (let j = 1; j <= height-index; j++) {
+            tree += "*";
+        }
+
+        for (let j = height; j >= height-index; j--) {
+            tree += "";
+        }
+        tree += "\n";
+    }
+
+    console.log(tree);
+}
+
 function area(a, b, c, typ) {
     switch (typ) {
         case "rectangle":
             console.log(rectangle(a, b));
             break;
-        case "trapeze":
-            console.log(trapeze(a, b));
+        case "trapezoid":
+            console.log(trapezoid(a, b, c));
             break;
         case "parallelogram":
             console.log(parallelogram(a, b));
@@ -123,7 +140,7 @@ function rectangle() {
 
 }
 
-function trapeze() {
+function trapezoid() {
 
 }
 

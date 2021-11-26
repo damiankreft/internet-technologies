@@ -26,20 +26,8 @@ function exercise_6() {
     christmasTree2(5);
 }
 
-function exercise_7() {
-
-}
-
-function exercise_8() {
-    
-}
-
-function exercise_9() {
-    
-}
-
 function exercise_10() {
-    
+    alert("Zadanie 10 należy sprawdzić za pomocą konsoli.");
 }
 
 class Auto {
@@ -172,19 +160,47 @@ function christmasTree(height) {
 
 function christmasTree2(height) {
     var tree = "";
-
-    for (let index = 0; index < height; index++) {
-        for (let j = 1; j <= height-index; j++) {
-            tree += "*";
+    
+    for (var row = 0; row < height; row++) {
+        for (var inline = 0; inline < height; inline++) {
+            if (inline < height - row) {
+                tree += "*";
+            }
+            else {
+                tree += " ";
+            }
+        }
+        
+        for (var inline = height; inline > 0; inline--) {
+            if (inline > height - row) {
+                tree += " ";
+            }
+            else {
+                tree += "*";
+            }
         }
 
-        for (let j = height; j >= height-index; j--) {
-            tree += "";
-        }
         tree += "\n";
+    }
+    
+    for (var end = 0; end < height * 2; end++) {
+        tree += "*"
     }
 
     console.log(tree);
+}
+
+function drawLeftPart(height) {
+    for (var row = 0; row < height; row++) {
+        for (var inline = 0; inline < height; inline++) {
+            if (inline < height - row) {
+                tree += "*";
+            }
+            else {
+                tree += " ";
+            }
+        }
+    }
 }
 
 function area(a, b, c, typ) {

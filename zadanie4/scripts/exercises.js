@@ -26,6 +26,20 @@ function exercise_6() {
     christmasTree2(5);
 }
 
+function exercise_7() {
+    area(2, 3, 4, "trapezoid");
+    area(2, 3, 4, "triangle");
+}
+
+function exercise_8() {
+    wynik(trapezoid, 2, 3, 4);
+    wynik(triangle, 2, 3, 4);
+}
+
+function exercise_9() {
+    alert("Nic tutaj nie ma. ;)")
+}
+
 function exercise_10() {
     alert("Zadanie 10 należy sprawdzić za pomocą konsoli.");
 }
@@ -160,7 +174,7 @@ function christmasTree(height) {
 
 function christmasTree2(height) {
     var tree = "";
-    
+
     for (var row = 0; row < height; row++) {
         for (var inline = 0; inline < height; inline++) {
             if (inline < height - row) {
@@ -203,7 +217,7 @@ function drawLeftPart(height) {
     }
 }
 
-function area(a, b, c, typ) {
+function area(a, b, c, type) {
     switch (typ) {
         case "rectangle":
             console.log(rectangle(a, b));
@@ -221,17 +235,27 @@ function area(a, b, c, typ) {
 }
 
 function rectangle() {
-
+    return console.log(a*b);
 }
 
 function trapezoid() {
-
+    return console.log(((a+b)*h)/2);
 }
 
 function parallelogram() {
-
+    return console.log(a*h);
 }
 
-function triangle() {
-    
+function triangle(a, h) {
+    return console.log((a*h)/2);
 }
+
+
+function trapez(a, b, c) {
+    return ((a+b)*c)/2;
+}
+var wynik = (fukcja, a, b, c) => { 
+    return fukcja(a, b, c); 
+}
+
+trapezoid(a, b, c);

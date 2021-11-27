@@ -257,5 +257,3 @@ function trapez(a, b, c) {
 var wynik = (fukcja, a, b, c) => { 
     return fukcja(a, b, c); 
 }
-
-trapezoid(a, b, c);

@@ -218,7 +218,7 @@ function drawLeftPart(height) {
 }
 
 function area(a, b, c, type) {
-    switch (typ) {
+    switch (type) {
         case "rectangle":
             console.log(rectangle(a, b));
             break;

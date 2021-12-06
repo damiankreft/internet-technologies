@@ -38,7 +38,7 @@ function changeDivInnerText() {
     var divs = document.body.getElementsByTagName("div");
 
     for (var i = 0; i < divs.length; i++) {
-        divs[i].textContent = "nowy tekst";
+        divs[i].textContent += " nowy tekst";
     }
 }
 

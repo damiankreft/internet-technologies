@@ -10,6 +10,10 @@ function exercise1_3() {
     changeDivBackground();
 }
 
+function exercise1_4() {
+    changeDivInnerText();
+}
+
 function addDivFive() {
     let div5 = document.createElement("div");
     div5.textContent += "div 5";
@@ -23,4 +27,12 @@ function removeFirstDivOccurence() {
 
 function changeDivBackground() {
     document.body.getElementsByTagName("div")[2].style.backgroundColor = "red";
+}
+
+function changeDivInnerText() {
+    var divs = document.body.getElementsByTagName("div");
+
+    for (var i = 0; i < divs.length; i++) {
+        divs[i].textContent = "nowy tekst";
+    }
 }

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <script src="scripts/accordion.js"></script>
+    <style>
+        .accordion {
+            background-color:thistle;
+            width: 406px;
+        }
+
+        .accordion-item {
+            background-color: wheat;
+            width: 400px;
+            margin: auto;
+        }
+
+        .accordion-item div {
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            display:none;
+        }
+
+        .accordion-header {
+            display: block;
+            height: 40px;
+            text-align: left;
+            padding: 5px;
+            margin-top: 5px;
+            margin-bottom: 2px;
+            background-color: #e2e2e2;
+        }
+
+        .accordion-header:hover {
+            cursor: pointer;
+        }
+
+        .enabled {
+            display:initial !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="accordion">
+        <div class="accordion-item">
+            <h3 class="accordion-header" onclick="accordionItemClick(this)">Item 1</h3>
+            <div class="enabled"><b>Accordion item 1</b> Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Itaque, minima necessitatibus consequatur aliquid sapiente reiciendis aperiam illo quis assumenda. 
+                Exercitationem aliquam inventore tenetur? Magni, veniam eos tempora cumque nemo id!
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h3 class="accordion-header" onclick="accordionItemClick(this)">Item 2</h3>
+            <div><b>Accordion item 2</b> Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Itaque, minima necessitatibus consequatur aliquid sapiente reiciendis aperiam illo quis assumenda. 
+                Exercitationem aliquam inventore tenetur? Magni, veniam eos tempora cumque nemo id!
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h3 class="accordion-header" onclick="accordionItemClick(this)">Item 3</h3>
+            <div><b>Accordion item 3</b> Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Itaque, minima necessitatibus consequatur aliquid sapiente reiciendis aperiam illo quis assumenda. 
+                Exercitationem aliquam inventore tenetur? Magni, veniam eos tempora cumque nemo id!
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h3 class="accordion-header" onclick="accordionItemClick(this)">Item 4</h3>
+            <div><b>Accordion item 4</b> Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Itaque, minima necessitatibus consequatur aliquid sapiente reiciendis aperiam illo quis assumenda. 
+                Exercitationem aliquam inventore tenetur? Magni, veniam eos tempora cumque nemo id!
+            </div>
+        </div>
+    </div>
+</body>
+</html>

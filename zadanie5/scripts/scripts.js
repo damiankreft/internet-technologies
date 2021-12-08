@@ -66,34 +66,28 @@ function createCars() {
 function createCarRecord(car) {
     var row = document.createElement("tr");
     
-    var rokColumn = document.createElement("td");
+    var rokColumn = row.insertCell(-1);
     rokColumn.innerText = car.rok;
-    row.appendChild(rokColumn);
 
-    var przebiegColumn = document.createElement("td");
+    var przebiegColumn = row.insertCell(-1);
     przebiegColumn.innerText = car.przebieg;
-    row.appendChild(przebiegColumn);
 
-    var cenaWyjsciowaColumn = document.createElement("td");
+    var cenaWyjsciowaColumn = row.insertCell(-1);
     cenaWyjsciowaColumn.innerText = car.cena_wyjsciowa;
-    row.appendChild(cenaWyjsciowaColumn);
 
-    var cenaKoncowaColumn = document.createElement("td");
+    var cenaKoncowaColumn = row.insertCell(-1);
     cenaKoncowaColumn.innerText = car.cena_koncowa;
-    row.appendChild(cenaKoncowaColumn);
 
     return row;
 }
 
 function createCarsTable(cars) {
     var table = document.createElement("table");
-    
-    var header = document.createElement("thead");
-    table.appendChild(header);
-    var headerTr = document.createElement("tr");
-    header.appendChild(headerTr);
+    var header = table.createTHead();
+    var headerTr = header.insertRow(-1);
+
     var rok = document.createElement("th");
-    var przebieg = document.createElement("th")
+    var przebieg = document.createElement("th");
     var cena_wyjsciowa = document.createElement("th");
     var cena_koncowa = document.createElement("th");
     
@@ -107,8 +101,7 @@ function createCarsTable(cars) {
     headerTr.appendChild(cena_wyjsciowa);
     headerTr.appendChild(cena_koncowa);
     
-    var data = document.createElement("tbody");
-    table.appendChild(data);
+    var data = table.createTBody();
 
     for (var i = 0; i < cars.length; i++) {
         data.appendChild(createCarRecord(cars[i]));

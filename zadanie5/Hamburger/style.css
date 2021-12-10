@@ -1,0 +1,223 @@
+/* ------------------- main structure ------------------- */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix {
+    clear: both;
+}
+
+body {
+    color: black;
+    background-image: url(wallpaper2.jfif);
+}
+
+#container {
+    width: 95%;
+    margin: auto;
+}
+
+#content {
+    border-radius: 8px 8px 0 0;
+    overflow-y: scroll;
+    width: 100%;
+    height: 800px;
+    background-color: teal;
+}
+
+footer {
+    width: 100%;
+}
+
+footer > div {
+    text-align: center;
+    margin: auto;
+}
+
+/* ------------------- navigation ------------------- */
+
+aside {
+    height: 5%;
+}
+
+aside ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    color: black;
+    width: auto;
+    float: left;
+    padding: 1%;
+}
+
+li a {
+    text-decoration: none;
+    color:black;
+    font-size: 18px;
+}
+
+li a:hover {
+    background-color: rgba(200, 200, 200, 1);
+}
+
+ul li ul {
+    height: auto;
+    display: none;
+    width: 100px;
+}
+
+ul li:hover ul {
+    display: block;
+    position: absolute;
+}
+
+ul li ul li {
+    background-color: rgba(120, 120, 120, 1);
+    width: auto;
+}
+
+ul li ul li a {
+    width: 100%;
+    font-size: 18px;
+    border-bottom: 1px solid white;
+}
+
+ul li ul li a {
+    padding: 1px 5px;
+}
+
+/* ------------------- content ------------------- */
+@media screen and (min-width: 1000px){
+    article, .part1, .part2 {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media (max-width: 1000px) {
+    article { 
+        width: 100%;
+    }
+}
+
+section {
+    margin: 1%;
+}
+
+img {
+    width: 100%;
+}
+
+textarea {
+    width: 200px;
+}
+
+
+/* ----------table---------- */
+
+table {
+    border-collapse: collapse;
+}
+
+tr {
+    border: 1px solid #ccc;
+}
+
+table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+th {
+    background-color: #000;
+}
+
+tr:nth-child(n) {
+    background-color: darksalmon;
+}
+
+tr:nth-child(2n) {
+    background-color:coral;
+}
+
+td {
+    text-align: center;
+}
+
+
+@media 
+only screen and (max-width: 1000px)  {
+
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide the headers from user but leave it in code for accesibility/readers. */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { 
+        
+        
+    }
+
+    tr:nth-child(2n) {
+        
+    }
+	
+	td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	td:nth-of-type(1):before { content: "First Name"; }
+	td:nth-of-type(2):before { content: "Last Name"; }
+	td:nth-of-type(3):before { content: "Job Title"; }
+}
+
+
+/* ------------------- form ------------------- */
+input[type=text] {
+    width: 198px;
+}
+
+#form-col-left, #form-col-right {
+    background-color: lightblue;
+}
+
+form {
+    margin-left: 10px;
+}
+
+
+footer {
+    background-color:cornflowerblue;
+    opacity:unset;
+}
+
+footer > div {
+    display: inline-block;
+    padding: 1%;
+}
+
+footer div {
+    width: 30%;
+}

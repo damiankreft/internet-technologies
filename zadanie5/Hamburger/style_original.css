@@ -1,0 +1,139 @@
+/* ------------------- main structure ------------------- */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix {
+    clear: both;
+}
+
+body {
+    color: black;
+    background-image: url(wallpaper2.jfif);
+}
+
+#container {
+    width: 80%;
+    margin: auto;
+}
+
+aside, #content {
+    float: left;
+}
+
+aside {
+    width: 20%;
+    height: 800px;
+    background-color: rgba(255, 234, 97, 0.8);
+}
+
+#content {
+    overflow-y: scroll;
+    width: 80%;
+    height: 800px;
+    background-color: teal;
+}
+
+footer {
+    width: 100%;
+}
+
+footer > div {
+    text-align: center;
+    margin: auto;
+}
+
+/* ------------------- navigation ------------------- */
+
+aside ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+li {
+    color: black;
+}
+
+li a {
+    text-decoration: none;
+    color:black;
+    font-size: 18px;
+    display: block;
+}
+
+li a:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+ul li ul li {
+    font-size: 18px;
+}
+
+ul li ul li a {
+    padding-left: 20px;
+}
+
+/* ------------------- content ------------------- */
+article {
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+img {
+    width: 800px;
+}
+
+textarea {
+    width: 200px;
+}
+
+table {
+    width: 100%;
+}
+
+th, tr {
+    height: 50px;
+}
+
+th {
+    background-color: #0000e6;
+}
+
+tr {
+    background-color: #4d4dff;
+}
+
+td {
+    text-align: center;
+}
+
+tr:nth-child(2n) {
+    background-color: #9999ff;
+}
+
+/* ------------------- form ------------------- */
+input[type=text] {
+    width: 198px;
+}
+
+form {
+    margin-left: 10px;
+}
+
+#form-col-left, #form-col-right {
+    float: left;
+    width: 50%;
+}
+
+footer {
+    background-color:cornflowerblue;
+    opacity:unset;
+}
+
+footer > div {
+    padding: 10px 0;
+}
